@@ -50,3 +50,11 @@ sync.init(dataset_id, {}, function() {
   sync.listCollisions(dataset_id, dataHandler.listCollisions);
   sync.removeCollision(dataset_id, dataHandler.removeCollision);
 });
+
+exports.getTweets = function(params, callback){
+  var tweets = [];
+  for(var i=0;i<5;i++){
+    tweets.push({text: "Example tweet " + i});
+  }
+  callback(undefined, {"tweets": tweets});
+}
