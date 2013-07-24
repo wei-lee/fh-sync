@@ -56,5 +56,5 @@ exports.getTweets = function(params, callback){
   for(var i=0;i<5;i++){
     tweets.push({text: "Example tweet " + i});
   }
-  callback(undefined, {"tweets": tweets});
+  return callback(undefined, {"tweets": tweets});
 }
